@@ -4,6 +4,7 @@ import java.io.File
 import java.util.*
 import kotlin.collections.ArrayList
 
+
 fun main() {
     val recordsFile = File("input.txt")
     val scan = Scanner(recordsFile)
