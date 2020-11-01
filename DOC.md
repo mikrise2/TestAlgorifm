@@ -1,11 +1,1 @@
-The normal algorithm is entered into the system from the input.txt file, the input is performed according to the following pattern:
-word //aab
-function1// a > s
-function2// s > q
-function3// q > n
-...
-
-
-Warning!!!
-1)do not leave blank lines in the input.txt file
-2)do not forget to put spaces between the elements of the algorithm and the ">"
+The normal algorithm is started by calling the command "gradle run --args = 'file_path'" from the console. For example: file "text.txt" located in data, the command will take the following form - "gradle run --args='src/text.txt'". The format of the input data in the file is as follows: the first line is the line to be changed, the next n lines contain two values. The first - what we will change, the second - what we will change are written with a greater than sign (>). Note that the first parameter must be followed by a space, and only after the greater than sign (>). And also for the second parameter, after the greater than sign (>), first there is a space, and only after the second parameter. The result of the program is output to the console.
