@@ -9,7 +9,6 @@ import kotlin.collections.HashMap
 class LineNotFoundException(override val message: String) : Exception(message)
 class FileDoesnNotExistException(override val message: String) : Exception(message)
 
-
 const val QUANTITY_OF_ELEMENTS_IN_ONE_CHANGE = 2
 const val REPLACEMENT_PARAMETER_SEPARATOR = ">"
 
@@ -18,7 +17,7 @@ const val REPLACEMENT_PARAMETER_SEPARATOR = ">"
  * @throws FileDoesnNotExistException - when file doesn't exists.
  */
 fun main(args: Array<String>) {
-    val recordsFile = File("data/${args[0]}")
+    val recordsFile = File(args[0])
     if (!recordsFile.exists()) throw FileDoesnNotExistException("File ${args[0]} doesn't exist")
     val scan = Scanner(recordsFile)
 
@@ -26,7 +25,7 @@ fun main(args: Array<String>) {
     val replaceParams = findReplaceParams(scan)
     if (checkOnLooping(replaceParams)) println("algorithm is looping") else {
         val newString = applyNormalAlgorithm(changedString, replaceParams)
-        println(newString)
+        print(newString)
     }
 }
 

@@ -3,6 +3,8 @@ package com.normAlgorithm.mikrise2
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Test
+import java.io.ByteArrayOutputStream
+import java.io.PrintStream
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -64,5 +66,4 @@ class NormalAlgorithmTest {
         val expectedVariable = true
         assertEquals(expectedVariable, checker)
     }
-
 }
