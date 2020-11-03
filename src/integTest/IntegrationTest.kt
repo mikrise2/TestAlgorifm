@@ -8,7 +8,6 @@ import java.io.PrintStream
 internal class IntegrationTest {
     @Test
     fun mainTest() {
-
         val baos = ByteArrayOutputStream()
         val ps = PrintStream(baos)
         val old = System.out

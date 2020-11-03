@@ -8,6 +8,7 @@ import kotlin.collections.HashMap
 
 class LineNotFoundException(override val message: String) : Exception(message)
 class FileDoesnNotExistException(override val message: String) : Exception(message)
+class EmptyArgsException(override val message: String) : Exception(message)
 
 const val QUANTITY_OF_ELEMENTS_IN_ONE_CHANGE = 2
 const val REPLACEMENT_PARAMETER_SEPARATOR = ">"
@@ -15,8 +16,10 @@ const val REPLACEMENT_PARAMETER_SEPARATOR = ">"
 /** start method
  *
  * @throws FileDoesnNotExistException - when file doesn't exists.
+ * @throws EmptyArgsException - when args are empty
  */
 fun main(args: Array<String>) {
+    if(args.isEmpty()) throw EmptyArgsException("Args are empty")
     val recordsFile = File(args[0])
     if (!recordsFile.exists()) throw FileDoesnNotExistException("File ${args[0]} doesn't exist")
     val scan = Scanner(recordsFile)
