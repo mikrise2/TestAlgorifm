@@ -59,9 +59,9 @@ class NormalAlgorithmTest {
 
     @Test
     fun testCheckOnLooping() {
-        val map = HashMap<String, String>()
-        map["a"] = "c"
-        map["c"] = "a"
+        val pair1 = Pair("a","c")
+        val pair2 = Pair("c","a")
+        val map = listOf(pair1,pair2)
         val checker = checkOnLooping(map)
         val expectedVariable = true
         assertEquals(expectedVariable, checker)
